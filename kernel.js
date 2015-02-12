@@ -87,8 +87,8 @@ define([
         idle.parent_header = request.header;
         
         this.execution_count = this.execution_count + 1;
-        this._handle_iopub_message(idle));
-        this._handle_shell_reply(reply));
+        this._handle_iopub_message(idle);
+        this._handle_shell_reply(reply);
     };
 
     
