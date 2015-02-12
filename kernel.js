@@ -47,7 +47,7 @@ define([
             data += "\n";
             var msg = that._get_msg("stream", {name: "stdout", text: data});
             msg.parent_header = request.header;
-            that._handle_iopub_message({data : JSON.stringify(msg)});
+            that._handle_iopub_message(msg);
         };
         try {
             r = eval(code);
@@ -87,8 +87,8 @@ define([
         idle.parent_header = request.header;
         
         this.execution_count = this.execution_count + 1;
-        this._handle_iopub_message({data : JSON.stringify(idle)});
-        this._handle_shell_reply({data : JSON.stringify(reply)});
+        this._handle_iopub_message(idle));
+        this._handle_shell_reply(reply));
     };
 
     
