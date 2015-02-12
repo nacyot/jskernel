@@ -80,7 +80,7 @@ define([
                 });
             }
             result.parent_header = request.header;
-            this._handle_iopub_message({data : JSON.stringify(result)});
+            this._handle_iopub_message({data : result});
         }
         
         var idle = this._get_msg("status", {status: "idle"});
